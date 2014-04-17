@@ -1,0 +1,535 @@
+@font-face {
+  font-family: 'mac_webfont';
+  src: url("../fonts/mac-webfont.eot");
+  src: url("../fonts/mac-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/mac-webfont.woff") format("woff"), url("../fonts/mac-webfont.ttf") format("truetype"), url("../fonts/mac-webfont.svg#lucida_granderegular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'menlo_regular';
+  src: url("../fonts/menlo-regular-webfont.eot");
+  src: url("../fonts/menlo-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/menlo-regular-webfont.woff") format("woff"), url("../fonts/menlo-regular-webfont.ttf") format("truetype"), url("../fonts/menlo-regular-webfont.svg#menloregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'menlo_italic';
+  src: url("../fonts/menlo-italic-webfont.eot");
+  src: url("../fonts/menlo-italic-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/menlo-italic-webfont.woff") format("woff"), url("../fonts/menlo-italic-webfont.ttf") format("truetype"), url("../fonts/menlo-italic-webfont.svg#menloitalic") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* line 42, css/styles.scss */
+* {
+  outline: none !Important;
+}
+
+/* line 50, css/styles.scss */
+#mini-viewport {
+  height: 654px;
+  width: 100%;
+  position: absolute;
+  top: 0px;
+  background-color: rgba(255, 255, 255, 0.11);
+}
+
+/* line 60, css/styles.scss */
+.selected-file {
+  background: url(../images/background_active_page.jpg) !important;
+  color: white !important;
+}
+
+/* line 65, css/styles.scss */
+#folders a {
+  display: block;
+  /*background: rgba(255, 0, 0, 0.32); */
+  height: 12px;
+  width: 100%;
+  padding: 4px 0px;
+  text-decoration: none;
+  color: black;
+  cursor: default;
+}
+
+/* line 77, css/styles.scss */
+.linedwrap {
+  border: none !important;
+  border-top: 1px solid #717171 !important;
+  overflow: hidden;
+  margin-top: -1px;
+  width: 763px !important;
+  padding-right: 118px;
+}
+
+/* line 86, css/styles.scss */
+.right-sidebar {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+/* line 92, css/styles.scss */
+.right-sidebar-positioning-div {
+  width: 100px;
+  height: 100px;
+  display: block;
+  position: absolute;
+  top: 56px;
+  right: 23px;
+  /*background: blue; */
+  z-index: 992;
+}
+
+/* line 103, css/styles.scss */
+.linedtextarea {
+  color: white;
+  font-family: 'menlo_regular';
+  font-size: 12px;
+  line-height: 16.5px !important;
+  margin-top: 5px;
+  overflow: hidden;
+}
+
+/* line 112, css/styles.scss */
+.linedwrap .lines {
+  margin-top: 0px;
+  width: 50px;
+  float: left;
+  overflow: hidden;
+  margin-right: 7px;
+  border-right: none !important;
+}
+
+/* line 122, css/styles.scss */
+.linedwrap .codelines .lineno {
+  padding-right: 17px;
+  font-family: 'menlo_regular';
+  font-size: 12px;
+  line-height: 16.5px !important;
+}
+
+/* line 130, css/styles.scss */
+#content-clipper {
+  background: red;
+  height: 625px;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
+/* line 139, css/styles.scss */
+#content-area {
+  /*background:#272822;*/
+  background: #003535;
+  width: 1140px;
+  position: relative;
+}
+
+/* line 146, css/styles.scss */
+.right-summary {
+  width: 700px !important;
+  position: absolute;
+  float: right;
+  color: white;
+  overflow: hidden;
+  -webkit-transform: scale(0.17);
+  -webkit-transform-origin: 0 0;
+  left: -10px;
+}
+
+/* line 157, css/styles.scss */
+.red {
+  color: red;
+}
+
+/* line 158, css/styles.scss */
+.content-ul li {
+  /* padding: 3px 0px; */
+}
+
+/* line 163, css/styles.scss */
+ul.sub-nav, ul.sub-sub-nav {
+  display: none;
+}
+
+/* line 167, css/styles.scss */
+ul.visible {
+  display: block;
+}
+
+/* line 172, css/styles.scss */
+#folders {
+  letter-spacing: .5px;
+}
+
+/* line 176, css/styles.scss */
+.arrow-right {
+  width: 0;
+  height: 0;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 9px solid #868686;
+  float: left;
+  margin-right: 6px;
+  margin-left: 13px;
+  margin-top: 6px;
+}
+
+/* line 187, css/styles.scss */
+.active-arrow {
+  -webkit-transform: rotate(90deg);
+}
+
+/* line 190, css/styles.scss */
+.arrow-hover {
+  border-left: 9px solid #9f9f9f !important;
+}
+
+/* line 195, css/styles.scss */
+.second-level-arrow-indent {
+  margin-left: 25px;
+}
+
+/* line 200, css/styles.scss */
+#contents-css li a {
+  text-indent: 50px;
+}
+
+/* line 206, css/styles.scss */
+.indent {
+  left: -9px;
+  position: relative;
+  WIDTH: 256PX;
+}
+
+/*.no-arrow {
+  margin-left: 15px;
+  padding: 3px 0px;
+} */
+/* line 217, css/styles.scss */
+.no-arrow a {
+  text-indent: 39px;
+}
+
+/* line 221, css/styles.scss */
+.left-nav {
+  /* padding-top: 7px; */
+}
+
+/* line 225, css/styles.scss */
+#folder-portfolio {
+  padding-top: 2px;
+}
+
+/* line 229, css/styles.scss */
+#folder-css {
+  padding-left: 9px;
+  padding-top: 0px;
+  display: block;
+}
+
+/* line 235, css/styles.scss */
+.back-img {
+  position: absolute;
+  top: -67px;
+  left: -1px;
+  z-index: -99;
+  width: 1142px;
+}
+
+/* line 244, css/styles.scss */
+#top-bar {
+  text-align: center;
+  position: relative;
+}
+
+/* line 250, css/styles.scss */
+.box-title {
+  background: url(../images/background_top-box.jpg);
+  background-repeat: repeat-x;
+  font-weight: 500;
+  padding: 0px;
+  max-height: 21px;
+  border-bottom: 1px solid #575757;
+}
+
+/* line 259, css/styles.scss */
+.box-title img {
+  height: 16px;
+  padding-right: 3px;
+  padding-top: 3px;
+}
+
+/* line 266, css/styles.scss */
+.box-title-words {
+  display: inline-block;
+  position: relative;
+  top: -3px;
+  text-shadow: 0px 1px 0px #d0d0d0;
+  font-size: 13px;
+}
+
+/* line 274, css/styles.scss */
+#buttons {
+  float: left;
+  position: absolute;
+  left: 1px;
+}
+
+/* line 281, css/styles.scss */
+#folder-structure {
+  float: left;
+  width: 256px;
+  height: 659px;
+  padding: 5px 0px 0px 9px;
+  box-sizing: border-box;
+  font-size: 10PX;
+  background: #e6e6e6;
+  z-index: 5;
+  position: relative;
+}
+
+/* line 293, css/styles.scss */
+#allem {
+  max-width: 1140px;
+  position: relative;
+}
+
+/* line 299, css/styles.scss */
+.mainTextArea {
+  width: 99% !important;
+}
+
+/* line 303, css/styles.scss */
+body {
+  background: #efefef;
+  font: .8em 'mac_webfont';
+  margin: 0;
+}
+
+/* line 309, css/styles.scss */
+.tab-container {
+  margin: 0;
+  padding: 0;
+  max-height: 34px;
+  background: #171814;
+  width: 100%;
+}
+
+/* line 317, css/styles.scss */
+ul.tabs {
+  margin: 0;
+  list-style-type: none;
+  line-height: 35px;
+  max-height: 34px;
+  overflow: hidden;
+  display: inline-block;
+  /*width:870px;*/
+  padding-left: 14px;
+}
+
+/* line 328, css/styles.scss */
+ul.tabs > li.active {
+  z-index: 2;
+  background: url(../images/tab-background_active.jpg);
+  background-size: 28px;
+  background-repeat: repeat-x;
+}
+
+/* line 336, css/styles.scss */
+ul.tabs > li.active > a {
+  color: #d2d2d2;
+}
+
+/* line 345, css/styles.scss */
+ul.tabs > li.active:before {
+  border-color: transparent #292929 transparent transparent;
+}
+
+/* line 350, css/styles.scss */
+ul.tabs > li.active:after {
+  border-color: transparent transparent transparent #292929;
+}
+
+/* line 354, css/styles.scss */
+ul.tabs > li {
+  float: right;
+  margin: 7px -10px 0;
+  border-top-right-radius: 25px 170px;
+  border-top-left-radius: 20px 90px;
+  padding: 0 40px 0 25px;
+  height: 170px;
+  background: url(../images/tab-background.jpg);
+  background-size: 16px;
+  background-repeat: repeat-x;
+  position: relative;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+  max-width: 200px;
+  min-width: 129px;
+  border-top: 1px solid #898989;
+}
+
+/* line 371, css/styles.scss */
+ul.tabs > li > a {
+  display: inline-block;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-decoration: none;
+  position: relative;
+  top: -3px;
+  font-size: 10px;
+  letter-spacing: .5px;
+  color: #939393;
+  white-space: nowrap;
+}
+
+/* line 386, css/styles.scss */
+.close-tab {
+  float: right;
+  margin-right: 3px;
+  -webkit-transform: rotate(45deg);
+  font-size: 15px !important;
+  -webkit-font-smoothing: inherit;
+  font-weight: bold;
+  color: #777777 !important;
+  position: absolute !important;
+  right: 25px;
+}
+
+/* line 399, css/styles.scss */
+ul.tabs > li:before, ul.tabs > li:after {
+  content: '';
+  background: transparent;
+  height: 20px;
+  width: 20px;
+  border-radius: 100%;
+  border-width: 10px;
+  top: 0px;
+  border-style: solid;
+  position: absolute;
+  z-index: -999;
+}
+
+/* line 412, css/styles.scss */
+ul.tabs > li:before {
+  border-color: transparent #3A3A3A transparent transparent;
+  -webkit-transform: rotate(48deg);
+  left: -23px;
+}
+
+/* line 418, css/styles.scss */
+ul.tabs > li:after {
+  border-color: transparent transparent transparent #383838;
+  -webkit-transform: rotate(-48deg);
+  right: -17px;
+}
+
+/* Clear Fix took for HTML 5 Boilerlate*/
+/* line 426, css/styles.scss */
+.clearfix:before, .clearfix:after {
+  content: "";
+  display: table;
+}
+
+/* line 427, css/styles.scss */
+.clearfix:after {
+  clear: both;
+}
+
+/* line 428, css/styles.scss */
+.clearfix {
+  zoom: 1;
+}
+
+/* line 431, css/styles.scss */
+.mCSB_container {
+  width: auto;
+  padding-right: 30px;
+  margin-right: 0px !important;
+  overflow: hidden;
+}
+
+/* line 440, css/styles.scss */
+.mCSB_dragger_bar {
+  width: 8px !important;
+}
+
+/* line 444, css/styles.scss */
+.mCSB_scrollTools .mCSB_draggerRail {
+  width: 17px !important;
+}
+
+/* line 449, css/styles.scss */
+.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+  background: #585858 !important;
+  /* Old browsers */
+  background: -moz-linear-gradient(left, #585858 0%, #404040 100%) !important;
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%, #585858), color-stop(100%, #404040)) !important;
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(left, #585858 0%, #404040 100%) !important;
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(left, #585858 0%, #404040 100%) !important;
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(left, #585858 0%, #404040 100%) !important;
+  /* IE10+ */
+  background: linear-gradient(to right, #585858 0%, #404040 100%) !important;
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#585858', endColorstr='#404040',GradientType=1 ) !important;
+  /* IE6-9 */
+  border: 1px solid #141414;
+}
+
+/* line 469, css/styles.scss */
+.mCSB_scrollTools {
+  opacity: 1 !important;
+}
+
+/* line 474, css/styles.scss */
+.mCSB_scrollTools .mCSB_draggerRail {
+  -webkit-border-radius: 0px !important;
+  -moz-border-radius: 0px !important;
+  border-radius: 0px !important;
+}
+
+/* line 481, css/styles.scss */
+code {
+  font-family: 'menlo_regular';
+}
+
+/* line 486, css/styles.scss */
+#footer {
+  width: 100%;
+  height: 20px;
+  background-color: red;
+  background: #636263;
+  background: -moz-linear-gradient(top, #636263 13%, #636263 13%, #595959 15%, #595959 15%, #555555 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(13%, #636263), color-stop(13%, #636263), color-stop(15%, #595959), color-stop(15%, #595959), color-stop(100%, #555555));
+  background: -webkit-linear-gradient(top, #636263 13%, #636263 13%, #595959 15%, #595959 15%, #555555 100%);
+  background: -o-linear-gradient(top, #636263 13%, #636263 13%, #595959 15%, #595959 15%, #555555 100%);
+  background: -ms-linear-gradient(top, #636263 13%, #636263 13%, #595959 15%, #595959 15%, #555555 100%);
+  background: linear-gradient(to bottom, #636263 13%, #636263 13%, #595959 15%, #595959 15%, #555555 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#636263', endColorstr='#555555',GradientType=0 );
+  border-top: 1px solid #9d9d9d;
+}
+
+/* line 501, css/styles.scss */
+.hide-show {
+  top: 100px;
+  -webkit-transition: all .5s;
+}
+
+/* line 507, css/styles.scss */
+.not-opened {
+  /*  display:none;*/
+  top: 100px;
+  display: none;
+}
+
+/* line 520, css/styles.scss */
+.tb-hidden {
+  display: none;
+}
