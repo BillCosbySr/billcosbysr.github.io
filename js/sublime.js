@@ -50,15 +50,46 @@ var regex = new RegExp(rep, 'g');
 });
 console.log($hotPinkList[i]+' : : yxyxy')
 
+
+
+
+
+
+
+
+
 }
 
+//var rep3 = '$$';
+//var regex3 = new RegExp(rep3, 'g');
 
-$('code').html(function(_, html) {
+$('code').html($('code').html().replace(/3noClr/g, ''));
+$('code').html($('code').html().replace(/"(.*?)"/g, function(){
+  return 'xxx'
+}));
+
+
+
+//results = astring.match(/"[\d\w\s]*"/g);
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*$('code').html(function(_, html) {
   var rep2="$$";
   var regex2 = new RegExp(rep2, 'g');
 
    return html.replace(regex2, 'monaaaay!')
- }
+ });
 
 /*$("code:contains('head')").html(function(_, html) {
    return html.replace(/(head)/g, '<span style="color:#f92772;">head</span>');
